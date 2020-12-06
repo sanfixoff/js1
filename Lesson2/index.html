@@ -3,25 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>GB Shop</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="root"></div>
-    <div id="root1"></div>
-    <script src="script.js"></script>
-    <div class="cart">
-   		<div class="cart-ico">
-   			<i></i>
-   		</div>
-   		<div class="cart-inner">
-   			<img class="cart-product-img" src="">
-   			<div class="cart-product-wrapper">
-   				<div class="cart-product-name"></div>
-   				<div class="cart-product-price"></div>
-   			</div>
-   			<div class="cart-products-sum"></div>
-   			<div class="cart-products-total-price"></div>
-   		</div>
-    </div>
+    <header>
+        <button class="cart-button" type="button"><img src="images/cartRed.png" alt=""></button>
+    </header>
+    <main>
+        <div class="goods-list">
+            <div class="goods-item">
+                <img class="good-img" src="">
+                <div class="good-name"></div>
+                <div class="good-price"></div>
+                <div class="good-numbers"></div>
+            </div>
+            <div class="goods-total">
+                <div class="goods-number-total"></div>
+                <div class="goods-price-total"></div>
+            </div> 
+        </div>
+    </main>
+    <script src="./script.js"></script>
 </body>
 </html>
