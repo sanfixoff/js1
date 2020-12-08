@@ -1,29 +1,37 @@
-const goods = [
-  { title: "PS5", price: 30000 },
-  { title: "IPhone 12", price: 100000 },
-  { title: "Shirt", price: 1000 },
-  { title: "XBOX", price: 30000 },
-  { title: "Boots", price: 5000 },
-  { title: "PC HyperX", price: 100000 },
-];
+class GoodsItem {
+  constructor(title, price) {
+    this.title = title;
+    this.price = price;
+  }
 
-const main = () => {
-  const createGoodsItemTemplate = ({
-    title,
-    price,
-  }) => `<div class="goods-item">
-    <h3>${title}</h3>
-    <p>${price}</p>
-</div>`;
-  const renderGoods = (items = goods) => {
-    const goodsItemsList = items
-      .map((item) => createGoodsItemTemplate(item))
-      .join("");
-    console.log(goodsItemsList);
-    document.querySelector(".goods-list").innerHTML = goodsItemsList;
-  };
+   getTemplate() {
+    return `<div class="goods-item">
+    <div class="good-name">${this.title}</div>
+    <div class="good-price">${this.price}</div>
+    </div>`;
+      }
+    }
 
-  renderGoods();
-};
+ class GoodsList {
+   goods = [];
 
-window.addEventListener("load", main);
+   fetchGoods() {
+     this.goods = [
+       { title: "Shirt", price: 150 },
+       { title: "Socks", price: 50 },
+       { title: "Jacket", price: 350 },
+     ];
+   }
+
+   render() {
+     const templates = this.goods
+       .map((i) => new GoodsItem(i.title, i.price).getTemplate())
+       .join("");
+
+     document.querySelector("#goods-list").innerHTML = templates;
+   }
+ }
+
+ const list = new GoodsList();
+ list.fetchGoods();
+ list.render();
