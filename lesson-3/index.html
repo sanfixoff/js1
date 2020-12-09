@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basket</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <header>
+        <button class="cart-button button" type="button" id="basket-btn">Корзина</button>
+        <div id="goods-list-section" class="goods-list">
+            <div id="goods-list-section__modal">
+                <input type="submit" value="X" id="goods-list-section__delete">
+                <h3 id="goods-list_head-line">Корзина</h3>
+                <div id="goods-list__product-box"></div>
+                <p id="goods-list__total"></p>
+            </div> 
+        </div>
+    </header>
+    <main>
+        <section class="product-card-section">
+                <div class="catalog-item">
+                    <img src="image/PS5.jpg">
+                    <h3>Sony Playstation 5</h3>
+                    <div class="additem-hover">
+                        <button class="addcart-btn" onclick="addItemToCart()" data-product-name="ps5">
+                            <i class="addcart-ico"></i>
+                        </button>
+                    </div> 
+                </div>
+                <div class="catalog-item">
+                    <img src="image/PC-Lumen.jpg">
+                    <h3>HyperPC Lumen</h3>
+                     <div class="additem-hover">
+                        <button class="addcart-btn" onclick="addItemToCart()" data-product-name="HyperPC">
+                            <i class="addcart-ico"></i>
+                        </button>
+                    </div> 
+                </div>
+                <div class="catalog-item">
+                    <img src="image/xboxX.jpeg">
+                    <h3>XBOX series X</h3>
+                     <div class="additem-hover">
+                        <button class="addcart-btn" onclick="addItemToCart()" data-product-name="xbox">
+                            <i class="addcart-ico"></i>
+                        </button>
+                    </div> 
+                </div>
+        </section>
+        
+    </main>
+    
+
+     
+    
+    <script src="script/goods_list.js" defer></script>
+</body>
+</html>
