@@ -1,0 +1,13 @@
+.callback {
+	display: flex;
+	flex-wrap: wrap;
+	max-width: 250px;
+	height: 150px;
+}
+.callback input {
+	width: 100%;
+	outline: none;
+}
+#userText {
+	padding: 0  0 50px 0;
+}
